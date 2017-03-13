@@ -68,7 +68,7 @@
           </div>
         </div>
       </div>
-      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; opacity: 0.5; background: url(http://www.euclid.lib.oh.us/images/tickle-your-brain/random-wallpapers-american-flag-wallpaper-34317.jpg?sfvrsn=0); background-size: cover"></div>
+      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; opacity: 0.5; background: url('/img/american-flag.jpg'); background-size: cover"></div>
     </section>
 
     <section class="what-area section-margin ptb-80">
