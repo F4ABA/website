@@ -1,0 +1,295 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Fight for a Better America</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="img/fav16.png">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/meanmenu.min.css">
+  
+  
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="header-area intelligent-header">
+      <div class="col-md-12">
+        <div class="logo floatleft">
+          <a href="index.html">
+            <img alt="" src="img/logo/logo2.png" style="max-width: 60px;">
+          </a>
+        </div>
+        <div class="header-search floatright">
+          <div class="header-button floatright">
+            <a href="#">Take Action</a>
+          </div>
+        </div>
+        <div class="main-menu floatright">
+          <nav>
+            <ul>
+              <li><a href="/issues">Issues</a></li>
+              <li><a href="/resources">Resources</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section style="position: relative;">
+      <div class="container text-center" style="position: relative; z-index: 10;">
+        <div style="margin: 80px 0; padding: 80px 20px; background: rgba(0,44,119,0.9);">
+          <h1 class="title6" style="color:white !important">Fight for a Better America</h1>
+          <h3 style="color:white !important; margin: 24px 0; font-weight: normal;">We mobilize leaders and the public to fight for stronger and more ethical leadership, effective policy, and a more equitable future for all Americans.</h3>
+          <div class="header-button" style="display: inline-block; margin-top: 20px;">
+            <a href="#" style="padding: 20px 40px;">Join the Team</a>
+          </div>
+        </div>
+      </div>
+      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; opacity: 0.5; background: url(http://www.euclid.lib.oh.us/images/tickle-your-brain/random-wallpapers-american-flag-wallpaper-34317.jpg?sfvrsn=0); background-size: cover"></div>
+    </section>
+
+    <section class="what-area section-margin ptb-80">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="what-top">
+              <div class="section-title">
+                <h1>Our Priorities</h1>
+                <div class="what-icon">
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="what-bottom">
+              <div class="btn-icon">
+                <div class="then-icon">
+                  <a href="#">
+                    <i class="fa fa-hand-stop-o" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="mission-text">
+                <h3>Resist</h3>
+              </div>
+              <p>To help stop or slow the worst aspects of the Trump agenda and reaffirm inclusive American values.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="what-bottom">
+              <div class="btn-icon">
+                <div class="then-icon">
+                  <a href="#">
+                    <i class="fa fa-money" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="mission-text">
+                <h3>Invest</h3>
+              </div>
+              <p>To identify and invest in (“seed fund”) early field organizing and other value-add activities in key districts and states for 2018 and 2020.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="what-bottom">
+              <div class="btn-icon">
+                <div class="then-icon">
+                  <a href="#">
+                    <i class="fa fa-group" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="mission-text">
+                <h3>Engage</h3>
+              </div>
+              <p>To educate, train & mobilize leaders and the public for effective, long-term engagement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="support-area stripe-parallax-bg ptb-95" data-parallax-speed="0.5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="support-all">
+              <h1>WHAT WE STAND FOR</h1>
+              <p>Our overarching mission — yours and ours together — is to fight for strong leadership, better policy, and a more equitable future for all Americans.</p>
+              <div class="support-text">
+                <a class="hs-btn t2" href="#">About Us</a>
+                <a class="hs-btn" href="#">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-area ptb-80">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="what-top meet">
+              <div class="section-title">
+                <h1>Contact Us</h1>
+                <div class="what-icon">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="all-contact-area contact-form">
+            <form id="contact-form" action="mail.php" method="post">
+              <div class="all-contact-text">
+                <div class="col-md-3 col-sm-6">
+                  <div class="di-na">
+                    <input name="name" class="form-control" type="text" required="" placeholder="Name">
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="di-na">
+                    <input name="email" class="form-control" type="email" required="" placeholder="Email">
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="di-na res-1">
+                    <input name="telephone" class="form-control" type="text" required="" placeholder="Tel">
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="di-na res-1">
+                    <input class="wpcf7" type="submit" value="Send">
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                  <div class="di-na res-sub">
+                    <input name="subject" class="form-control" type="text" required="" placeholder="Subject">
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                  <div class="tnm-textarea">
+                    <textarea name="message" class="form-control" required="" placeholder="Message"></textarea>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <p class="form-messege"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer id="footer" class="social-area">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="social-logo">
+                <a href="/">
+                  <img src="img/logo/logo2.png" alt="" style="width: 50px; height: 50px;">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="social-icon floatright">
+                <ul>
+                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a class="twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a class="instagram" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-middle">
+        <div class="container">
+          <h3 style="color: white; margin-top: 20px;">About us</h3>
+          <div class="middle-mgn">
+            <p>
+              Paid for by Fight for a Better America.
+              <br>
+              Not authorized by any candidate or candidate’s committee. www.fightforbetter.org
+              <br>
+              Contributions or gifts to Fight for a Better America are not tax deductible as charitable contributions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="footer-bottom-all">
+              <div class="col-md-6 col-xs-12 col-sm-9">
+                <div class="footer-menu">
+                  <ul>
+                    <li><a href="#">Issues  </a></li>
+                    <li><a href="#">Resources </a></li>
+                    <li><a href="#">Contact  </a></li>
+                    <li><a href="#">Take Action</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xs-12 col-sm-3">
+                <div class="copyright-text floatright">
+                  <p>&copy;&nbsp;2017 Fight for a Better America</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toTop">
+      <i class="fa fa-chevron-up"></i>
+    </div>
+  </div>
+
+
+  <script src="js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+  
+  
+  
+  
+
+  
+
+  
+
+</body>
+
+</html>

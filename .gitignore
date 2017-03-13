@@ -1,0 +1,6 @@
+*.log
+
+node_modules
+awsconfig.js
+
+.DS_Store
