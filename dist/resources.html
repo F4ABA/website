@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-<title>Home | Fight for a Better America</title>
+<title>Resources | Fight for a Better America</title>
 <meta name="description" content="">
 
 <link rel="shortcut icon" type="image/x-icon" href="img/fav16.png">
@@ -55,7 +56,7 @@
       <nav>
         <ul>
           <li><a href="/issues" class="">Issues</a></li>
-          <li><a href="/resources" class="">Resources</a></li>
+          <li><a href="/resources" class="active">Resources</a></li>
           <li><a href="/contact" class="">Contact</a></li>
         </ul>
       </nav>
@@ -64,92 +65,44 @@
 </header>
 
 
-    <section style="position: relative;">
-      <div class="container text-center" style="z-index: 10; padding: 80px 0;">
-        <div style="padding: 80px 20px; background: rgba(0,44,119,0.9);">
-          <h1 class="title6 text-white">Fight for a Better America</h1>
-          <h4 style="color:white !important; margin: 24px 0; font-weight: normal;">We mobilize leaders and the public to fight for stronger and more ethical leadership, effective policy, and a more equitable future for all Americans.</h4>
-          <div class="header-button" style="display: inline-block; margin-top: 20px;">
-            <a href="#" style="padding: 20px 40px;">Join the Team</a>
-          </div>
-        </div>
+    <section class="text-center">
+      <div style="padding: 50px 20px 40px; background: rgba(0,44,119,0.9);">
+        <h3 class="text-white title-font">Call My Senator</h3>
       </div>
-      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; opacity: 0.5; background: url('/img/american-flag.jpg'); background-size: cover"></div>
     </section>
 
-    <section class="what-area section-margin ptb-80">
+    <section id="main" class="section-margin ptb-80">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="what-top">
-              <div class="section-title">
-                <h1>Our Priorities</h1>
-                <div class="what-icon">
-                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-6">
+            <p>Call your Senators and Representative by submitting your zip code below.  This will return their names, clickable phone numbers, and other information. If that doesn’t work for any reason, you can still look them up online: <a href="http://www.senate.gov/general/contact_information/senators_cfm.cfm" target="_blank">Senators</a> and <a href="http://www.house.gov/representatives/find/" target="_blank">Representatives</a>.</p>
+            <p>If you would like to volunteer even more actively, join us <a href="/contact" target="_blank">here</a>.</p>
+
+            <form @submit="getByZip" class="form form-inline" style="margin: 10px 0 20px;">
+              <input type="text" v-model="zip" class="form-control input-lg" placeholder="Zip Code"/>
+              &nbsp;
+              <button type="submit" class="btn btn-primary">Get Results</button>
+            </form>
+
+            <div v-if="submitted & results.length === 0" class="text-muted" v-cloak>No results. Please check your zip code and try again.</div>
+
+            <div v-for="result in results" class="media my-3">
+              <img class="d-flex mr-3" style="width: 80px; height: auto;" :src="'https://www.govtrack.us/data/photos/' + result.govtrack_id + '-200px.jpeg'" :alt="result.last_name"/>
+              <div class="media-body">
+                <h5 class="m-0">
+                  <span v-text="result.title"></span>&nbsp;<span v-text="result.first_name"></span>&nbsp;<span v-text="result.last_name"></span>
+                  <br/>
+                  <a :href="'tel:' + result.phone" v-text="result.phone" style="color: #0d8ad9;"></a>
+                </h5>
+                <div style="margin: 5px 0" v-if="result.website">
+                  <a :href="result.website" target="_blank" v-text="result.website" style="color: #043174;"></a>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="what-bottom">
-              <div class="btn-icon">
-                <div class="then-icon">
-                  <a href="#">
-                    <i class="fa fa-hand-stop-o" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="mission-text">
-                <h3>Resist</h3>
-              </div>
-              <p>To help stop or slow the worst aspects of the Trump agenda and reaffirm inclusive American values.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="what-bottom">
-              <div class="btn-icon">
-                <div class="then-icon">
-                  <a href="#">
-                    <i class="fa fa-money" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="mission-text">
-                <h3>Invest</h3>
-              </div>
-              <p>To identify and invest in (“seed fund”) early field organizing and other value-add activities in key districts and states for 2018 and 2020.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="what-bottom">
-              <div class="btn-icon">
-                <div class="then-icon">
-                  <a href="#">
-                    <i class="fa fa-group" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="mission-text">
-                <h3>Engage</h3>
-              </div>
-              <p>To educate, train & mobilize leaders and the public for effective, long-term engagement.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="support-area stripe-parallax-bg ptb-95" data-parallax-speed="0.5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="support-all">
-              <h1>What We Stand For</h1>
-              <p>Our mission is to fight for strong leadership, better policy, and a more equitable future for all Americans.</p>
-              <div class="support-text">
-                <a class="hs-btn mr-1" href="#">About Us</a>
-                <a class="hs-btn" href="/contact">Contact Us</a>
+                <a :href="'https://facebook.com/' + result.facebook_id" v-if="result.facebook_id" target="_blank" style="margin-right: 10px;">
+                  <i class="fa fa-lg fa-facebook-official" style="color: #3b5998;"></i>
+                </a>
+                <a :href="'https://twitter.com/' + result.twitter_id" v-if="result.twitter_id" target="_blank" style="margin-right: 10px;">
+                  <i class="fa fa-lg fa-twitter" style="color: #1da1f2;"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -219,20 +172,40 @@
   <i class="fa fa-chevron-up"></i>
 </div>
 
-  </div>
 
+  </div>
 
   <script src="js/vendor/jquery-1.12.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  
-  
-  
-  
-  
 
-  
-
-  
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    console.log('running')
+    var app = new Vue({
+      el: '#main',
+      data: {
+        zip: '',
+        submitted: false,
+        results: []
+      },
+      methods: {
+        getByZip: function (e) {
+          if (e) e.preventDefault()
+          // var url = 'https://congress.api.sunlightfoundation.com/legislators/locate?apikey=d9733fd4fa5a43cda9885da876a67848&zip=' + this.zip
+          var url = 'https://congress.api.sunlightfoundation.com/legislators/locate?apikey=fcc49828184a400497a701cb43130c19&zip=' + this.zip
+          axios.get(url)
+          .then(function (res) {
+            this.submitted = true
+            this.results = res.data.results
+          }.bind(this))
+          .catch(function (err) {
+            console.log('err', err)
+          })
+        }
+      }
+    })
+  </script>
 
 </body>
 

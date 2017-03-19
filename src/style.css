@@ -115,8 +115,8 @@ h6 {
     font-family: 'Raleway', sans-serif;
 }
 a {
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.1s ease 0s;
+    transition: all 0.1s ease 0s;
     text-decoration: none;
 }
 a:hover {
@@ -222,8 +222,8 @@ body {
     font-size: 13px;
     font-weight: 700;
     padding: 16px 14px;
-    -webkit-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.1s ease 0s;
+    transition: all 0.1s ease 0s;
     text-transform: uppercase;
 }
 .header-button > a:hover {
@@ -645,8 +645,9 @@ a.min1:hover {
     position: relative;
 }
 .support-area {
-    background-image: url("http://fightforbetter.org/wp-content/uploads/2015/07/wwsf_all2.jpg");
-    background-size: cover;
+  background: #be0024;
+    /*background-image: url("http://fightforbetter.org/wp-content/uploads/2015/07/wwsf_all2.jpg");*/
+    /*background-size: cover;*/
 }
 .support-all {
     position: relative;
@@ -683,8 +684,8 @@ a.min1:hover {
     margin-right: 44px;
 }
 .support-all a:hover {
-    border: 1px solid #ea000d;
-    background-color: #ea000d;
+    border: 1px solid #011c64;
+    background-color: #011c64;
 }
 /*----------------------------------------
     6. Events
@@ -2139,24 +2140,6 @@ p.coming-two {
     transition: all 0.4s ease 0s;
     width: 100%;
 }
-.contact-form input::-webkit-input-placeholder {
-    /* Chrome */
-
-    color: #555;
-    opacity: 1;
-}
-.contact-form input::-moz-placeholder {
-    /* Firefox 19+ */
-
-    color: #555;
-    opacity: 1;
-}
-.contact-form textarea::-moz-placeholder {
-    /* Firefox 19+ */
-
-    color: #555;
-    opacity: 1;
-}
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: #ea000d;
@@ -2227,18 +2210,6 @@ button.submit i {
     transition: all 0.4s ease 0s;
     width: 568px;
     margin-right: 30px;
-}
-.mc-form input::-webkit-input-placeholder {
-    /* Chrome */
-
-    color: #fff;
-    opacity: 1;
-}
-.mc-form input::-moz-placeholder {
-    /* Firefox 19+ */
-
-    color: #fff;
-    opacity: 1;
 }
 .mc-form button.submit {
     padding: 14px 20px;
@@ -4225,27 +4196,6 @@ span.tag {
 .communication-text {
     padding-left: 87px;
     padding-top: 9px;
-}
-.map-input-contact-area .contact-form input::-webkit-input-placeholder,
-.donate-sidebar-bottom input::-webkit-input-placeholder {
-    /* Chrome */
-
-    color: #333;
-    opacity: 1;
-}
-.map-input-contact-area .contact-form input::-moz-placeholder,
-.donate-sidebar-bottom input::-moz-placeholder {
-    /* Firefox 19+ */
-
-    color: #333;
-    opacity: 1;
-}
-.map-input-contact-area .contact-form textarea::-moz-placeholder,
-.donate-sidebar-bottom textarea::-moz-placeholder {
-    /* Firefox 19+ */
-
-    color: #333;
-    opacity: 1;
 }
 .map-input-contact-area input.form-control2 {
     border: 1px solid #ccc;

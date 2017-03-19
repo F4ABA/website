@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-<title>Home | Fight for a Better America</title>
+<title>Issues | Fight for a Better America</title>
 <meta name="description" content="">
 
 <link rel="shortcut icon" type="image/x-icon" href="img/fav16.png">
@@ -54,7 +55,7 @@
     <div class="main-menu floatright">
       <nav>
         <ul>
-          <li><a href="/issues" class="">Issues</a></li>
+          <li><a href="/issues" class="active">Issues</a></li>
           <li><a href="/resources" class="">Resources</a></li>
           <li><a href="/contact" class="">Contact</a></li>
         </ul>
@@ -64,96 +65,26 @@
 </header>
 
 
-    <section style="position: relative;">
-      <div class="container text-center" style="z-index: 10; padding: 80px 0;">
-        <div style="padding: 80px 20px; background: rgba(0,44,119,0.9);">
-          <h1 class="title6 text-white">Fight for a Better America</h1>
-          <h4 style="color:white !important; margin: 24px 0; font-weight: normal;">We mobilize leaders and the public to fight for stronger and more ethical leadership, effective policy, and a more equitable future for all Americans.</h4>
-          <div class="header-button" style="display: inline-block; margin-top: 20px;">
-            <a href="#" style="padding: 20px 40px;">Join the Team</a>
-          </div>
-        </div>
+    <section class="text-center">
+      <div style="padding: 50px 20px 40px; background: rgba(0,44,119,0.9);">
+        <h3 class="text-white title-font">Get to know the movement<br>and what YOU can do for our country</h3>
       </div>
-      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; opacity: 0.5; background: url('/img/american-flag.jpg'); background-size: cover"></div>
     </section>
 
-    <section class="what-area section-margin ptb-80">
+    <section class="section-margin ptb-80">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="what-top">
-              <div class="section-title">
-                <h1>Our Priorities</h1>
-                <div class="what-icon">
-                  <i class="fa fa-bookmark" aria-hidden="true"></i>
-                </div>
-              </div>
+        <component>
+          <div class="row justify-content-md-center" v-if="items.length < 1">
+            <div class="loader"></div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div v-for="item in items" class="col-sm-3 col-xs-6">
+              <a :href="item.link" :title="item.title" v-text="item.title"></a>
+              <h1 v-text="item.title"></h1>
+              <img :src="item.image"/>
             </div>
           </div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="what-bottom">
-              <div class="btn-icon">
-                <div class="then-icon">
-                  <a href="#">
-                    <i class="fa fa-hand-stop-o" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="mission-text">
-                <h3>Resist</h3>
-              </div>
-              <p>To help stop or slow the worst aspects of the Trump agenda and reaffirm inclusive American values.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="what-bottom">
-              <div class="btn-icon">
-                <div class="then-icon">
-                  <a href="#">
-                    <i class="fa fa-money" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="mission-text">
-                <h3>Invest</h3>
-              </div>
-              <p>To identify and invest in (“seed fund”) early field organizing and other value-add activities in key districts and states for 2018 and 2020.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="what-bottom">
-              <div class="btn-icon">
-                <div class="then-icon">
-                  <a href="#">
-                    <i class="fa fa-group" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="mission-text">
-                <h3>Engage</h3>
-              </div>
-              <p>To educate, train & mobilize leaders and the public for effective, long-term engagement.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="support-area stripe-parallax-bg ptb-95" data-parallax-speed="0.5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="support-all">
-              <h1>What We Stand For</h1>
-              <p>Our mission is to fight for strong leadership, better policy, and a more equitable future for all Americans.</p>
-              <div class="support-text">
-                <a class="hs-btn mr-1" href="#">About Us</a>
-                <a class="hs-btn" href="/contact">Contact Us</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        </component>
       </div>
     </section>
 
@@ -219,11 +150,14 @@
   <i class="fa fa-chevron-up"></i>
 </div>
 
+
   </div>
 
+  <script project="P86M78" src="https://cdn.component.io/v1"></script>
 
   <script src="js/vendor/jquery-1.12.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+
   
   
   

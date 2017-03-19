@@ -1,0 +1,102 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%- include('partials/head.ejs', { data: { title: 'Resources' }}) %>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <%- include('partials/header.ejs', { data: { state: 'resources' }}) %>
+
+    <section class="text-center">
+      <div style="padding: 50px 20px 40px; background: rgba(0,44,119,0.9);">
+        <h3 class="text-white title-font">Call My Senator</h3>
+      </div>
+    </section>
+
+    <section id="main" class="section-margin ptb-80">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-6">
+            <p>Call your Senators and Representative by submitting your zip code below.  This will return their names, clickable phone numbers, and other information. If that doesn’t work for any reason, you can still look them up online: <a href="http://www.senate.gov/general/contact_information/senators_cfm.cfm" target="_blank">Senators</a> and <a href="http://www.house.gov/representatives/find/" target="_blank">Representatives</a>.</p>
+            <p>If you would like to volunteer even more actively, join us <a href="/contact" target="_blank">here</a>.</p>
+
+            <form @submit="getByZip" class="form form-inline" style="margin: 10px 0 20px;">
+              <input type="text" v-model="zip" class="form-control input-lg" placeholder="Zip Code"/>
+              &nbsp;
+              <button type="submit" class="btn btn-primary">Get Results</button>
+            </form>
+
+            <div v-if="submitted & results.length === 0" class="text-muted" v-cloak>No results. Please check your zip code and try again.</div>
+
+            <div v-for="result in results" class="media my-3">
+              <img class="d-flex mr-3" style="width: 80px; height: auto;" :src="'https://www.govtrack.us/data/photos/' + result.govtrack_id + '-200px.jpeg'" :alt="result.last_name"/>
+              <div class="media-body">
+                <h5 class="m-0">
+                  <span v-text="result.title"></span>&nbsp;<span v-text="result.first_name"></span>&nbsp;<span v-text="result.last_name"></span>
+                  <br/>
+                  <a :href="'tel:' + result.phone" v-text="result.phone" style="color: #0d8ad9;"></a>
+                </h5>
+                <div style="margin: 5px 0" v-if="result.website">
+                  <a :href="result.website" target="_blank" v-text="result.website" style="color: #043174;"></a>
+                </div>
+                <a :href="'https://facebook.com/' + result.facebook_id" v-if="result.facebook_id" target="_blank" style="margin-right: 10px;">
+                  <i class="fa fa-lg fa-facebook-official" style="color: #3b5998;"></i>
+                </a>
+                <a :href="'https://twitter.com/' + result.twitter_id" v-if="result.twitter_id" target="_blank" style="margin-right: 10px;">
+                  <i class="fa fa-lg fa-twitter" style="color: #1da1f2;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('partials/footer.ejs') %>
+
+  </div>
+
+  <script src="js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    console.log('running')
+    var app = new Vue({
+      el: '#main',
+      data: {
+        zip: '',
+        submitted: false,
+        results: []
+      },
+      methods: {
+        getByZip: function (e) {
+          if (e) e.preventDefault()
+          // var url = 'https://congress.api.sunlightfoundation.com/legislators/locate?apikey=d9733fd4fa5a43cda9885da876a67848&zip=' + this.zip
+          var url = 'https://congress.api.sunlightfoundation.com/legislators/locate?apikey=fcc49828184a400497a701cb43130c19&zip=' + this.zip
+          axios.get(url)
+          .then(function (res) {
+            this.submitted = true
+            this.results = res.data.results
+          }.bind(this))
+          .catch(function (err) {
+            console.log('err', err)
+          })
+        }
+      }
+    })
+  </script>
+
+</body>
+
+</html>
