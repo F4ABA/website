@@ -4,11 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-<title>Issues | Fight for a Better America</title>
+<title>Who We Are | Fight for a Better America</title>
 <meta name="description" content="">
 
 <link rel="shortcut icon" type="image/x-icon" href="img/fav16.png">
@@ -55,10 +54,10 @@
     <div class="main-menu floatright">
       <nav>
         <ul>
-          <!-- <li><a href="/issues" class="active">Issues</a></li> -->
+          <!-- <li><a href="/issues" class="">Issues</a></li> -->
           <!-- <li><a href="/resources" class="">Resources</a></li> -->
           <!-- <li><a href="/contact" class="">Contact</a></li> -->
-          <li><a href="/about" class="">Who We Are</a></li>
+          <li><a href="/about" class="active">Who We Are</a></li>
           <li><a href="/invest" class="">Invest</a></li>
           <li><a href="/initiatives" class="">Initiatives</a></li>
         </ul>
@@ -68,26 +67,44 @@
 </header>
 
 
-    <section class="text-center">
-      <div style="padding: 50px 20px 40px; background: rgba(0,44,119,0.9);">
-        <h3 class="text-white title-font">Get to know the movement<br>and what YOU can do for our country</h3>
-      </div>
-    </section>
-
-    <section class="section-margin ptb-80">
-      <div class="container">
-        <component>
-          <div class="row justify-content-md-center" v-if="items.length < 1">
-            <div class="loader"></div>
-          </div>
-          <div class="row justify-content-md-center">
-            <div v-for="item in items" class="col-sm-3 col-xs-6">
-              <a :href="item.link" :title="item.title" v-text="item.title"></a>
-              <h1 v-text="item.title"></h1>
-              <img :src="item.image"/>
+    <section class="bg-faded py-5">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="what-top meet">
+              <div class="section-title">
+                <h1 class="title-font">Who We Are</h1>
+                <div class="what-icon">
+                  <i class="fa fa-users" aria-hidden="true"></i>
+                </div>
+              </div>
             </div>
           </div>
-        </component>
+        </div>
+        <div class="row justify-content-md-center mb-5">
+          <div class="col-12 col-md-10">
+            <h4>We are diverse community of leaders joining forces to educate one another and the public, lobby Members of Congress and elect better candidates.</h4>
+            <p>As we grow, we hope to draw from our private sector colleagues’ Fortune 500, management consulting, finance, legal, project management, talent development, marketing, social media, and other “best practices”, while also drawing from our team’s extensive grassroots and grass tops political and policy experience, which spans from City Hall to Capitol Hill.</p>
+            <p>We provide investment support for initiatives & grassroots organizations with high potential to block harmful actions and protect communities made more vulnerable by extremist Administration actions.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-md-center mb-5 pb-5">
+          <div class="col-12 col-md-10 text-center">
+            <h2 class="title-font">Leadership</h2>
+            <component>
+              <div v-for="item in items" class="m-3" style="display: inline-block; max-width: 160px; vertical-align: top;">
+                <img class="rounded-circle m-2" src="https://placeholdit.imgix.net/~text?txtsize=18&txt=Fight%20For%20Better&w=120&h=120" />
+                <h5 v-text="item.name" class="mb-1"></h5>
+                <p v-text="item.role"></p>
+              </div>
+            </component>
+            <strong>...plus hundreds of colleagues & friends</strong>
+            <br>
+            *founding team
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -153,22 +170,17 @@
   <i class="fa fa-chevron-up"></i>
 </div>
 
-
   </div>
 
-  <script project="P86M78" src="https://cdn.component.io/v1"></script>
 
   <script src="js/vendor/jquery-1.12.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 
+  <script project="P86M78" src="https://cdn.component.io/v1"></script>
   
   
   
   
-  
-
-  
-
   
 
 </body>

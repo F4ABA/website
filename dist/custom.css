@@ -2,12 +2,23 @@
 .main-menu ul li a:hover {
   border-bottom: 3px solid #ea000d;
 }
-.text-white { color: white !important; }
-.title-font { font-family: 'Lora', serif; }
+.bg-primary {
+  background-color: #011c64 !important;
+}
 .btn.btn-primary {
   background-color: #011c64;
   border-color: #011c64;
 }
+.bg-danger {
+  background-color: #ea000d;
+}
+.btn.btn-danger {
+  background-color: #ea000d;
+  border-color: #ea000d;
+}
+.text-white { color: white !important; }
+.title-font { font-family: 'Lora', serif; }
+
 .form-control::-moz-placeholder {color:#999;opacity:1}
 .form-control:-ms-input-placeholder {color:#999}
 .form-control::-webkit-input-placeholder {color:#999}

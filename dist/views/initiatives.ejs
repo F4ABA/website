@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%- include('partials/head.ejs', { data: { title: 'Initiatives' }}) %>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <%- include('partials/header.ejs', { data: { state: 'initiatives' }}) %>
+
+    <section class="bg-faded py-5">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="what-top meet">
+              <div class="section-title">
+                <h1 class="title-font">Initiatives</h1>
+                <div class="what-icon">
+                  <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <h4>Congressional Races</h4>
+            <p>State/district opportunities considered “high value” by political experts</p>
+            <p>Initiatives focused on a specific, under-met need (e.g., early field organizing in targeted Congressional district vs. national media buys)</p>
+            <p>Initiatives co-led by local, on-the-ground partners with deep community knowledge</p>
+            <p>Immediate targeted races; please contact us for more information about our work on specific US House and Senate races</p>
+
+            <h4>Partnerships</h4>
+            <p>Organizations with high potential to block harmful actions and protect communities made more vulnerable by extremist Administration actions</p>
+            <p>Investments will strengthen the capacity, reach & sustainability of trusted, high-performing CBOs defending vulnerable communities, e.g. Muslims, immigrants, transgender & gender non-conforming people</p>
+            <p>In some cases complement our electoral investments in target electoral districts. Effective grassroots resistance in key states/districts today sets the stage for voter mobilization in 2018)</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('partials/footer.ejs') %>
+  </div>
+
+
+  <script src="js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <%# <script src="js/ajax-mail.js"></script>%>
+  <%# <script src="js/wow.min.js"></script>%>
+  <%# <script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>%>
+  <%# <script src="lib/home.js" type="text/javascript"></script>%>
+  <%# <script src="js/plugins.js"></script>%>
+
+</body>
+
+</html>

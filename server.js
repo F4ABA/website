@@ -7,10 +7,14 @@ let express     = require('express')
 ,   port = process.env.PORT || 3000
 
 const routes = [
-  { path: '/',          file: 'index.html' },
-  { path: '/issues',    file: 'issues.html' },
-  { path: '/resources', file: 'resources.html' },
-  { path: '/contact',   file: 'contact.html' },
+  { path: '/',            file: 'index.html' },
+  { path: '/about',       file: 'about.html' },
+  { path: '/issues',      file: 'issues.html' },
+  { path: '/invest',      file: 'invest.html' },
+  { path: '/initiatives', file: 'initiatives.html' },
+  { path: '/resources',   file: 'resources.html' },
+  { path: '/contact',     file: 'contact.html' },
+  { path: '/help',     file: 'help.html' },
 ]
 
 routes.map(pair => {

@@ -4,11 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-<title>Issues | Fight for a Better America</title>
+<title>Initiatives | Fight for a Better America</title>
 <meta name="description" content="">
 
 <link rel="shortcut icon" type="image/x-icon" href="img/fav16.png">
@@ -55,12 +54,12 @@
     <div class="main-menu floatright">
       <nav>
         <ul>
-          <!-- <li><a href="/issues" class="active">Issues</a></li> -->
+          <!-- <li><a href="/issues" class="">Issues</a></li> -->
           <!-- <li><a href="/resources" class="">Resources</a></li> -->
           <!-- <li><a href="/contact" class="">Contact</a></li> -->
           <li><a href="/about" class="">Who We Are</a></li>
           <li><a href="/invest" class="">Invest</a></li>
-          <li><a href="/initiatives" class="">Initiatives</a></li>
+          <li><a href="/initiatives" class="active">Initiatives</a></li>
         </ul>
       </nav>
     </div>
@@ -68,26 +67,36 @@
 </header>
 
 
-    <section class="text-center">
-      <div style="padding: 50px 20px 40px; background: rgba(0,44,119,0.9);">
-        <h3 class="text-white title-font">Get to know the movement<br>and what YOU can do for our country</h3>
-      </div>
-    </section>
-
-    <section class="section-margin ptb-80">
-      <div class="container">
-        <component>
-          <div class="row justify-content-md-center" v-if="items.length < 1">
-            <div class="loader"></div>
-          </div>
-          <div class="row justify-content-md-center">
-            <div v-for="item in items" class="col-sm-3 col-xs-6">
-              <a :href="item.link" :title="item.title" v-text="item.title"></a>
-              <h1 v-text="item.title"></h1>
-              <img :src="item.image"/>
+    <section class="bg-faded py-5">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="what-top meet">
+              <div class="section-title">
+                <h1 class="title-font">Initiatives</h1>
+                <div class="what-icon">
+                  <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                </div>
+              </div>
             </div>
           </div>
-        </component>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <h4>Congressional Races</h4>
+            <p>State/district opportunities considered “high value” by political experts</p>
+            <p>Initiatives focused on a specific, under-met need (e.g., early field organizing in targeted Congressional district vs. national media buys)</p>
+            <p>Initiatives co-led by local, on-the-ground partners with deep community knowledge</p>
+            <p>Immediate targeted races; please contact us for more information about our work on specific US House and Senate races</p>
+
+            <h4>Partnerships</h4>
+            <p>Organizations with high potential to block harmful actions and protect communities made more vulnerable by extremist Administration actions</p>
+            <p>Investments will strengthen the capacity, reach & sustainability of trusted, high-performing CBOs defending vulnerable communities, e.g. Muslims, immigrants, transgender & gender non-conforming people</p>
+            <p>In some cases complement our electoral investments in target electoral districts. Effective grassroots resistance in key states/districts today sets the stage for voter mobilization in 2018)</p>
+
+          </div>
+        </div>
       </div>
     </section>
 
@@ -153,22 +162,15 @@
   <i class="fa fa-chevron-up"></i>
 </div>
 
-
   </div>
 
-  <script project="P86M78" src="https://cdn.component.io/v1"></script>
 
   <script src="js/vendor/jquery-1.12.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-
   
   
   
   
-  
-
-  
-
   
 
 </body>

@@ -4,11 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-<title>Issues | Fight for a Better America</title>
+<title>Invest | Fight for a Better America</title>
 <meta name="description" content="">
 
 <link rel="shortcut icon" type="image/x-icon" href="img/fav16.png">
@@ -55,11 +54,11 @@
     <div class="main-menu floatright">
       <nav>
         <ul>
-          <!-- <li><a href="/issues" class="active">Issues</a></li> -->
+          <!-- <li><a href="/issues" class="">Issues</a></li> -->
           <!-- <li><a href="/resources" class="">Resources</a></li> -->
           <!-- <li><a href="/contact" class="">Contact</a></li> -->
           <li><a href="/about" class="">Who We Are</a></li>
-          <li><a href="/invest" class="">Invest</a></li>
+          <li><a href="/invest" class="active">Invest</a></li>
           <li><a href="/initiatives" class="">Initiatives</a></li>
         </ul>
       </nav>
@@ -68,26 +67,78 @@
 </header>
 
 
-    <section class="text-center">
-      <div style="padding: 50px 20px 40px; background: rgba(0,44,119,0.9);">
-        <h3 class="text-white title-font">Get to know the movement<br>and what YOU can do for our country</h3>
-      </div>
-    </section>
-
-    <section class="section-margin ptb-80">
-      <div class="container">
-        <component>
-          <div class="row justify-content-md-center" v-if="items.length < 1">
-            <div class="loader"></div>
-          </div>
-          <div class="row justify-content-md-center">
-            <div v-for="item in items" class="col-sm-3 col-xs-6">
-              <a :href="item.link" :title="item.title" v-text="item.title"></a>
-              <h1 v-text="item.title"></h1>
-              <img :src="item.image"/>
+    <section class="bg-faded py-5">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="what-top meet">
+              <div class="section-title">
+                <h1 class="title-font">Invest</h1>
+                <div class="what-icon">
+                  <i class="fa fa-money" aria-hidden="true"></i>
+                </div>
+              </div>
             </div>
           </div>
-        </component>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card mb-3">
+              <div class="card-header bg-primary text-white">
+                <h4 class="my-2">Why Invest With Fight</h4>
+              </div>
+              <div class="card-block">
+                <p>We share your vision, values, passion, and commitment. We promise to work hard on your behalf</p>
+                <p>We have a thoughtful and targeted approach to slowing key aspects of the Trump agenda and achieving electoral gains in 2018 and beyond</p>
+                <p>We’re focused on smart actions that will drive results on-the-ground (e.g., early organizing and capacity building – not high priced political consultants or advertising campaigns). We are data-driven & results-oriented</p>
+                <p>We are working in partnership with trusted local partners with deep experience on the ground; likewise, national volunteer team brings a breadth of relevant experience</p>
+              </div>
+            </div>
+
+            <div class="card mb-3">
+              <div class="card-header bg-primary text-white">
+                <h4 class="my-2">Overview</h4>
+              </div>
+              <div class="card-block">
+                <p>Many of us are social sector experts with deep understanding of the key distinctions between different organization structures (e.g., 501c3 vs. 401c4 vs. 527 vs. various political action committee or “PAC” structures) -- especially the key legal and tax code limitations on advocacy and lobbying.</p>
+                <p>If you or your organization are curious about options and trade-offs for your organization, we recommend that you check out Bolder Advocacy: <a href="http://www.bolderadvocacy.org/">bolderadvocacy.org</a>)</p>
+              </div>
+            </div>
+
+            <div class="card mb-3">
+              <div class="card-header bg-primary text-white">
+                <h4 class="my-2">Super PAC Fight for Better</h4>
+              </div>
+              <div class="card-block">
+                <p>Help flip federal House & Senate seats in 2018 and beyond: identify & fund early field organizing & other value-add activities (vs. national media buys or political consultants)</p>
+                <a class="btn btn-lg btn-danger" href="https://secure.actblue.com/contribute/page/fightforbetter">Donate</a>
+              </div>
+            </div>
+
+            <div class="card mb-3">
+              <div class="card-header bg-primary text-white">
+                <h4 class="my-2">501 c4 Fight for Better (in process)</h4>
+              </div>
+              <div class="card-block">
+                <p>Invest in specific, strategic efforts to stop or slow the most troubling aspects of the Trump agenda and reaffirm inclusive American values (e.g., by lobbying Members of Congress and other public officials; supporting grassroots and “grasstops” advocacy)</p>
+              </div>
+            </div>
+
+            <div class="card mb-3">
+              <div class="card-header bg-primary text-white">
+                <h4 class="my-2">501c3 Fight for Better advocacy and capacity building organization (in process)</h4>
+              </div>
+              <div class="card-block">
+                <p>Invest in capacity building for non-partisan, grassroots, leaders and organizations in key locales around the country</p>
+              </div>
+            </div>
+
+
+            <p></p>
+
+          </div>
+        </div>
       </div>
     </section>
 
@@ -153,22 +204,15 @@
   <i class="fa fa-chevron-up"></i>
 </div>
 
-
   </div>
 
-  <script project="P86M78" src="https://cdn.component.io/v1"></script>
 
   <script src="js/vendor/jquery-1.12.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-
   
   
   
   
-  
-
-  
-
   
 
 </body>

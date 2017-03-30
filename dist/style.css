@@ -649,6 +649,16 @@ a.min1:hover {
     /*background-image: url("http://fightforbetter.org/wp-content/uploads/2015/07/wwsf_all2.jpg");*/
     /*background-size: cover;*/
 }
+.support-area .mission-text > h3,
+.support-area p {
+  color: white;
+}
+.support-area .what-bottom:hover .btn-icon {
+  background: #011c64;
+}
+.support-area .what-bottom:hover i {
+  color: #011c64;
+}
 .support-all {
     position: relative;
     z-index: 999;

@@ -1,0 +1,186 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%- include('partials/head.ejs', { data: { title: 'How You Can Help' }}) %>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <%- include('partials/header.ejs', { data: { state: 'help' }}) %>
+
+    <section class="bg-faded py-5">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="what-top meet">
+              <div class="section-title">
+                <h1 class="title-font">Join the Team</h1>
+                <div class="what-icon">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center mb-5 pb-5">
+          <div class="col-12 col-md-6">
+            <form>
+              <div class="form-group row">
+                <div class="col-12">
+                  <label for="stateInput" class="col-form-label">In what states are you willing to volunteer?</label>
+                  <select class="form-control">
+                  	<option></option>
+                  	<option value="AL">Alabama</option>
+                  	<option value="AK">Alaska</option>
+                  	<option value="AZ">Arizona</option>
+                  	<option value="AR">Arkansas</option>
+                  	<option value="CA">California</option>
+                  	<option value="CO">Colorado</option>
+                  	<option value="CT">Connecticut</option>
+                  	<option value="DE">Delaware</option>
+                  	<option value="DC">District Of Columbia</option>
+                  	<option value="FL">Florida</option>
+                  	<option value="GA">Georgia</option>
+                  	<option value="HI">Hawaii</option>
+                  	<option value="ID">Idaho</option>
+                  	<option value="IL">Illinois</option>
+                  	<option value="IN">Indiana</option>
+                  	<option value="IA">Iowa</option>
+                  	<option value="KS">Kansas</option>
+                  	<option value="KY">Kentucky</option>
+                  	<option value="LA">Louisiana</option>
+                  	<option value="ME">Maine</option>
+                  	<option value="MD">Maryland</option>
+                  	<option value="MA">Massachusetts</option>
+                  	<option value="MI">Michigan</option>
+                  	<option value="MN">Minnesota</option>
+                  	<option value="MS">Mississippi</option>
+                  	<option value="MO">Missouri</option>
+                  	<option value="MT">Montana</option>
+                  	<option value="NE">Nebraska</option>
+                  	<option value="NV">Nevada</option>
+                  	<option value="NH">New Hampshire</option>
+                  	<option value="NJ">New Jersey</option>
+                  	<option value="NM">New Mexico</option>
+                  	<option value="NY">New York</option>
+                  	<option value="NC">North Carolina</option>
+                  	<option value="ND">North Dakota</option>
+                  	<option value="OH">Ohio</option>
+                  	<option value="OK">Oklahoma</option>
+                  	<option value="OR">Oregon</option>
+                  	<option value="PA">Pennsylvania</option>
+                  	<option value="RI">Rhode Island</option>
+                  	<option value="SC">South Carolina</option>
+                  	<option value="SD">South Dakota</option>
+                  	<option value="TN">Tennessee</option>
+                  	<option value="TX">Texas</option>
+                  	<option value="UT">Utah</option>
+                  	<option value="VT">Vermont</option>
+                  	<option value="VA">Virginia</option>
+                  	<option value="WA">Washington</option>
+                  	<option value="WV">West Virginia</option>
+                  	<option value="WI">Wisconsin</option>
+                  	<option value="WY">Wyoming</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  <label for="messageInput" class="col-form-label">How do you want to help?</label>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="">
+                      Lobby Members of Congress
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="">
+                      Educate our networks & the public
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="">
+                      Participate in national & local campaigns
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="">
+                      Social media
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="">
+                      Event planning & volunteer engagement
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="">
+                      Host a house party
+                    </label>
+                  </div>
+                  <small>*Check two or three if you are feeling ambitious</small>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  <label for="nameInput" class="col-form-label">Name</label>
+                  <input type="text" class="form-control" id="nameInput" placeholder="Name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  <label for="emailInput" class="col-form-label">Email</label>
+                  <input type="email" class="form-control" id="emailInput" placeholder="email@example.com">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  <label for="telInput" class="col-form-label">Tel</label>
+                  <input type="text" class="form-control" id="telInput" placeholder="(555) 951-6532">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  <label for="messageInput" class="col-form-label">Additional information you would like us to know</label>
+                  <textarea class="form-control" id="messageInput" rows=6></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <%- include('partials/footer.ejs') %>
+  </div>
+
+
+  <script src="js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <%# <script src="js/ajax-mail.js"></script>%>
+  <%# <script src="js/wow.min.js"></script>%>
+  <%# <script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>%>
+  <%# <script src="lib/home.js" type="text/javascript"></script>%>
+  <%# <script src="js/plugins.js"></script>%>
+
+</body>
+
+</html>

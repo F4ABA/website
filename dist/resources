@@ -49,15 +49,18 @@
     </div>
     <div class="header-search floatright">
       <div class="header-button floatright">
-        <a href="/">Take Action</a>
+        <a href="/help">How You Can Help</a>
       </div>
     </div>
     <div class="main-menu floatright">
       <nav>
         <ul>
-          <li><a href="/issues" class="">Issues</a></li>
-          <li><a href="/resources" class="active">Resources</a></li>
-          <li><a href="/contact" class="">Contact</a></li>
+          <!-- <li><a href="/issues" class="">Issues</a></li> -->
+          <!-- <li><a href="/resources" class="active">Resources</a></li> -->
+          <!-- <li><a href="/contact" class="">Contact</a></li> -->
+          <li><a href="/about" class="">Who We Are</a></li>
+          <li><a href="/invest" class="">Invest</a></li>
+          <li><a href="/initiatives" class="">Initiatives</a></li>
         </ul>
       </nav>
     </div>
