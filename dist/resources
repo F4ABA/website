@@ -179,13 +179,13 @@
   </div>
 
   <script src="js/vendor/jquery-1.12.4.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
-  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script project="P86M78" src="https://cdn.component.io/v1"></script>
+
+
   <script>
-    console.log('running')
-    var app = new Vue({
+    var app = new ComponentVue({
       el: '#main',
       data: {
         zip: '',
@@ -195,9 +195,8 @@
       methods: {
         getByZip: function (e) {
           if (e) e.preventDefault()
-          // var url = 'https://congress.api.sunlightfoundation.com/legislators/locate?apikey=d9733fd4fa5a43cda9885da876a67848&zip=' + this.zip
           var url = 'https://congress.api.sunlightfoundation.com/legislators/locate?apikey=fcc49828184a400497a701cb43130c19&zip=' + this.zip
-          axios.get(url)
+          componentAxios.get(url)
           .then(function (res) {
             this.submitted = true
             this.results = res.data.results

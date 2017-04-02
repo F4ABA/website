@@ -43,61 +43,7 @@
 
   </div>
 
-  <script project="P86M78" src="https://cdn.component.io/v1"></script>
-
-  <script src="js/vendor/jquery-1.12.4.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-
-  <%# <script src="js/ajax-mail.js"></script>%>
-  <%# <script src="js/wow.min.js"></script>%>
-  <%# <script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>%>
-  <%# <script src="lib/home.js" type="text/javascript"></script>%>
-  <%# <script src="js/plugins.js"></script>%>
-
-  <%# <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_qDiT4MyM7IxaGPbQyLnMjVUsJck02N0"></script>
-  <script>
-    var myCenter = new google.maps.LatLng(30.249796, -97.754667);
-
-    function initialize() {
-      var mapProp = {
-        center: myCenter,
-        scrollwheel: false,
-        zoom: 15,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      var map = new google.maps.Map(document.getElementById("hastech"), mapProp);
-      var marker = new google.maps.Marker({
-        position: myCenter,
-        animation: google.maps.Animation.BOUNCE,
-        icon: 'img/map-marker.png',
-        map: map,
-      });
-      var styles = [{
-        stylers: [{
-            hue: "#c5c5c5"
-          },
-          {
-            saturation: -100
-          }
-        ]
-      }, ];
-      map.setOptions({
-        styles: styles
-      });
-
-      marker.setMap(map);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-  </script>%>
-
-  <%# <script type="text/javascript">
-    // grab an element
-    var myElement = document.querySelector(".intelligent-header");
-    // construct an instance of Headroom, passing the element
-    var headroom = new Headroom(myElement);
-    // initialise
-    headroom.init();
-  </script>%>
+  <%- include('partials/scripts.ejs') %>
 
 </body>
 
