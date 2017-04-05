@@ -1,6 +1,14 @@
-*.log
-
 node_modules
+bower_components
 awsconfig.js
+
+*.log
+*.dump
+*.key
+*.crt
+*.pem
+
+commands_to_run.md
+
 
 .DS_Store

@@ -67,7 +67,7 @@
 </header>
 
 
-    <section class="bg-faded py-5">
+    <section class="bg-faded py-5" style="min-height: 400px;">
       <div class="container pt-5">
         <div class="row">
           <div class="col-md-12 text-center">
@@ -82,64 +82,63 @@
           </div>
         </div>
         <div class="row justify-content-md-center mb-5 pb-5">
-          <div class="col-12 col-md-6">
-            <form>
+          <div id="volunteer-form" class="col-12 col-md-6" v-cloak>
+            <form @submit="submit" class="form" v-if="!success">
               <div class="form-group row">
                 <div class="col-12">
                   <label for="stateInput" class="col-form-label">In what states are you willing to volunteer?</label>
-                  <select class="form-control">
-                  	<option></option>
-                  	<option value="AL">Alabama</option>
-                  	<option value="AK">Alaska</option>
-                  	<option value="AZ">Arizona</option>
-                  	<option value="AR">Arkansas</option>
-                  	<option value="CA">California</option>
-                  	<option value="CO">Colorado</option>
-                  	<option value="CT">Connecticut</option>
-                  	<option value="DE">Delaware</option>
-                  	<option value="DC">District Of Columbia</option>
-                  	<option value="FL">Florida</option>
-                  	<option value="GA">Georgia</option>
-                  	<option value="HI">Hawaii</option>
-                  	<option value="ID">Idaho</option>
-                  	<option value="IL">Illinois</option>
-                  	<option value="IN">Indiana</option>
-                  	<option value="IA">Iowa</option>
-                  	<option value="KS">Kansas</option>
-                  	<option value="KY">Kentucky</option>
-                  	<option value="LA">Louisiana</option>
-                  	<option value="ME">Maine</option>
-                  	<option value="MD">Maryland</option>
-                  	<option value="MA">Massachusetts</option>
-                  	<option value="MI">Michigan</option>
-                  	<option value="MN">Minnesota</option>
-                  	<option value="MS">Mississippi</option>
-                  	<option value="MO">Missouri</option>
-                  	<option value="MT">Montana</option>
-                  	<option value="NE">Nebraska</option>
-                  	<option value="NV">Nevada</option>
-                  	<option value="NH">New Hampshire</option>
-                  	<option value="NJ">New Jersey</option>
-                  	<option value="NM">New Mexico</option>
-                  	<option value="NY">New York</option>
-                  	<option value="NC">North Carolina</option>
-                  	<option value="ND">North Dakota</option>
-                  	<option value="OH">Ohio</option>
-                  	<option value="OK">Oklahoma</option>
-                  	<option value="OR">Oregon</option>
-                  	<option value="PA">Pennsylvania</option>
-                  	<option value="RI">Rhode Island</option>
-                  	<option value="SC">South Carolina</option>
-                  	<option value="SD">South Dakota</option>
-                  	<option value="TN">Tennessee</option>
-                  	<option value="TX">Texas</option>
-                  	<option value="UT">Utah</option>
-                  	<option value="VT">Vermont</option>
-                  	<option value="VA">Virginia</option>
-                  	<option value="WA">Washington</option>
-                  	<option value="WV">West Virginia</option>
-                  	<option value="WI">Wisconsin</option>
-                  	<option value="WY">Wyoming</option>
+                  <select multiple class="form-control" v-model="states" size=10>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
                   </select>
                 </div>
               </div>
@@ -148,37 +147,37 @@
                   <label for="messageInput" class="col-form-label">How do you want to help?</label>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" value="">
+                      <input class="form-check-input" type="checkbox" value="Lobby Members of Congress" v-model="howToHelp"/>
                       Lobby Members of Congress
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" value="">
+                      <input class="form-check-input" type="checkbox" value="Educate our networks & the public" v-model="howToHelp"/>
                       Educate our networks & the public
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" value="">
+                      <input class="form-check-input" type="checkbox" value="Participate in national & local campaigns" v-model="howToHelp"/>
                       Participate in national & local campaigns
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" value="">
+                      <input class="form-check-input" type="checkbox" value="Social media" v-model="howToHelp"/>
                       Social media
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" value="">
+                      <input class="form-check-input" type="checkbox" value="Event planning & volunteer engagement" v-model="howToHelp"/>
                       Event planning & volunteer engagement
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" value="">
+                      <input class="form-check-input" type="checkbox" value="Host a house party" v-model="howToHelp"/>
                       Host a house party
                     </label>
                   </div>
@@ -188,33 +187,31 @@
               <div class="form-group row">
                 <div class="col-12">
                   <label for="nameInput" class="col-form-label">Name</label>
-                  <input type="text" class="form-control" id="nameInput" placeholder="Name">
+                  <input type="text" v-model="name" class="form-control" id="nameInput" placeholder="Your Name">
                 </div>
               </div>
               <div class="form-group row">
                 <div class="col-12">
                   <label for="emailInput" class="col-form-label">Email</label>
-                  <input type="email" class="form-control" id="emailInput" placeholder="email@example.com">
+                  <input type="email" v-model="email" class="form-control" id="emailInput" placeholder="email@example.com">
                 </div>
               </div>
               <div class="form-group row">
                 <div class="col-12">
                   <label for="telInput" class="col-form-label">Tel</label>
-                  <input type="text" class="form-control" id="telInput" placeholder="(555) 951-6532">
+                  <input type="text" v-model="phone" class="form-control" id="telInput" placeholder="(555) 951-6532">
                 </div>
               </div>
               <div class="form-group row">
                 <div class="col-12">
                   <label for="messageInput" class="col-form-label">Additional information you would like us to know</label>
-                  <textarea class="form-control" id="messageInput" rows=6></textarea>
+                  <textarea v-model="message" class="form-control" id="messageInput" rows=6></textarea>
                 </div>
               </div>
-              <div class="form-group row">
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </div>
+              <div class="alert alert-warning" v-if="alert" v-text="alert"></div>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            <div v-if="success" class="alert alert-info">Thank you, we'll be in touch!</div>
           </div>
         </div>
 
@@ -265,7 +262,7 @@
               <li><a class="ml-0" href="/issues">Issues</a></li>
               <li><a href="/resources">Resources</a></li>
               <li><a href="/contact">Contact</a></li>
-              <li><a href="/">Take Action</a></li>
+              <li><a href="/help">Take Action</a></li>
             </ul>
           </div>
         </div>
@@ -290,6 +287,57 @@
 
 <script project="P86M78" src="https://cdn.component.io/v1"></script>
 
+<script>
+  Component.ready(function () {
+    $('[component-cloak]').removeAttr('component-cloak')
+  })
+</script>
+
+
+  <script>
+    (function() {
+      new ComponentVue({
+        el: '#volunteer-form',
+        data: {
+          states: [],
+          howToHelp: [],
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+          alert: '',
+          success: false,
+        },
+        methods: {
+          submit: function (e) {
+            e.preventDefault()
+            var that = this
+            this.alert = ''
+            if (!this.email) return this.alert = 'Please add your email address'
+            componentAxios.post(ComponentUrl + 'posts', {
+              project: ComponentProject,
+              instance: 277,
+              data: {
+                name: this.name,
+                email: this.email,
+                phone: this.phone,
+                states: this.states,
+                howToHelp: this.howToHelp,
+                message: this.message
+              }
+            })
+            .then(function (response) {
+              that.alert = 'Message sent'
+              that.success = true
+            })
+            .catch(function (error) {
+              that.alert = '' + error.message
+            })
+          }
+        }
+      })
+    })()
+  </script>
 
 </body>
 

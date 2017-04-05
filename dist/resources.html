@@ -79,7 +79,7 @@
         <div class="row justify-content-md-center">
           <div class="col-12 col-md-6">
             <p>Call your Senators and Representative by submitting your zip code below.  This will return their names, clickable phone numbers, and other information. If that doesn’t work for any reason, you can still look them up online: <a href="http://www.senate.gov/general/contact_information/senators_cfm.cfm" target="_blank">Senators</a> and <a href="http://www.house.gov/representatives/find/" target="_blank">Representatives</a>.</p>
-            <p>If you would like to volunteer even more actively, join us <a href="/contact" target="_blank">here</a>.</p>
+            <p>If you would like to volunteer even more actively, join us <a href="/help">here</a>.</p>
 
             <form @submit="getByZip" class="form form-inline" style="margin: 10px 0 20px;">
               <input type="text" v-model="zip" class="form-control input-lg" placeholder="Zip Code"/>
@@ -157,7 +157,7 @@
               <li><a class="ml-0" href="/issues">Issues</a></li>
               <li><a href="/resources">Resources</a></li>
               <li><a href="/contact">Contact</a></li>
-              <li><a href="/">Take Action</a></li>
+              <li><a href="/help">Take Action</a></li>
             </ul>
           </div>
         </div>
@@ -182,6 +182,12 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script project="P86M78" src="https://cdn.component.io/v1"></script>
+
+<script>
+  Component.ready(function () {
+    $('[component-cloak]').removeAttr('component-cloak')
+  })
+</script>
 
 
   <script>

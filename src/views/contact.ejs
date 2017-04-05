@@ -30,38 +30,36 @@
           </div>
         </div>
         <div class="row justify-content-md-center mb-5 pb-5">
-          <div class="col-12 col-md-6">
-            <form>
+          <div id="volunteer-form" class="col-12 col-md-6" v-cloak>
+            <form @submit="submit" class="form" v-if="!success">
               <div class="form-group row">
-                <label for="nameInput" class="col-sm-2 col-form-label">Name</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="nameInput" placeholder="Name">
+                <div class="col-12">
+                  <label for="nameInput" class="col-form-label">Name</label>
+                  <input type="text" v-model="name" class="form-control" id="nameInput" placeholder="Your Name">
                 </div>
               </div>
               <div class="form-group row">
-                <label for="emailInput" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control" id="emailInput" placeholder="email@example.com">
+                <div class="col-12">
+                  <label for="emailInput" class="col-form-label">Email</label>
+                  <input type="email" v-model="email" class="form-control" id="emailInput" placeholder="email@example.com">
                 </div>
               </div>
               <div class="form-group row">
-                <label for="telInput" class="col-sm-2 col-form-label">Tel</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="telInput" placeholder="(555) 951-6532">
+                <div class="col-12">
+                  <label for="telInput" class="col-form-label">Tel</label>
+                  <input type="text" v-model="phone" class="form-control" id="telInput" placeholder="(555) 951-6532">
                 </div>
               </div>
               <div class="form-group row">
-                <label for="messageInput" class="col-sm-2 col-form-label">Message</label>
-                <div class="col-sm-10">
-                  <textarea class="form-control" id="messageInput" rows=6></textarea>
+                <div class="col-12">
+                  <label for="messageInput" class="col-form-label">Message</label>
+                  <textarea v-model="message" class="form-control" id="messageInput" rows=6></textarea>
                 </div>
               </div>
-              <div class="form-group row">
-                <div class="offset-sm-2 col-sm-10">
-                  <button type="submit" class="btn btn-primary">Send message</button>
-                </div>
-              </div>
+              <div class="alert alert-warning" v-if="alert" v-text="alert"></div>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            <div v-if="success" class="alert alert-info">Thank you, we'll be in touch!</div>
           </div>
         </div>
 
@@ -72,6 +70,48 @@
   </div>
 
   <%- include('partials/scripts.ejs') %>
+
+  <script>
+    (function() {
+      new ComponentVue({
+        el: '#volunteer-form',
+        data: {
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+          alert: '',
+          success: false,
+        },
+        methods: {
+          submit: function (e) {
+            e.preventDefault()
+            var that = this
+            this.alert = ''
+            if (!this.email) return this.alert = 'Please add your email address'
+            if (!this.message) return this.alert = 'Please add your message'
+            componentAxios.post(ComponentUrl + 'posts', {
+              project: ComponentProject,
+              instance: 278,
+              data: {
+                name: this.name,
+                email: this.email,
+                phone: this.phone,
+                message: this.message
+              }
+            })
+            .then(function (response) {
+              that.alert = 'Message sent'
+              that.success = true
+            })
+            .catch(function (error) {
+              that.alert = '' + error.message
+            })
+          }
+        }
+      })
+    })()
+  </script>
 
 </body>
 

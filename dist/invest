@@ -67,7 +67,7 @@
 </header>
 
 
-    <section class="bg-faded py-5">
+    <section class="bg-faded py-5" style="min-height: 400px;">
       <div class="container pt-5">
         <div class="row">
           <div class="col-md-12 text-center">
@@ -82,16 +82,15 @@
           </div>
         </div>
 
-        <div class="row">
+        <div component-cloak class="row">
           <div class="col-12">
             <component content name="Overview" class="py-2"></component>
           </div>
         </div>
-        <div class="row">
+        <div component-cloak class="row">
           <div class="col-sm-6">
             <div class="card">
               <div class="card-block">
-
                 <component content name="Why invest"></component>
               </div>
             </div>
@@ -165,7 +164,7 @@
               <li><a class="ml-0" href="/issues">Issues</a></li>
               <li><a href="/resources">Resources</a></li>
               <li><a href="/contact">Contact</a></li>
-              <li><a href="/">Take Action</a></li>
+              <li><a href="/help">Take Action</a></li>
             </ul>
           </div>
         </div>
@@ -189,6 +188,12 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script project="P86M78" src="https://cdn.component.io/v1"></script>
+
+<script>
+  Component.ready(function () {
+    $('[component-cloak]').removeAttr('component-cloak')
+  })
+</script>
 
 
 </body>

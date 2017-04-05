@@ -67,7 +67,7 @@
 </header>
 
 
-    <section class="bg-faded py-5">
+    <section class="bg-faded py-5" style="min-height: 400px;">
       <div class="container pt-5">
         <div class="row">
           <div class="col-md-12 text-center">
@@ -82,20 +82,9 @@
           </div>
         </div>
 
-        <div class="row">
+        <div component-cloak class="row">
           <div class="col-12">
             <component content></component>
-            <!-- <h4>Congressional Races</h4>
-            <p>State/district opportunities considered “high value” by political experts</p>
-            <p>Initiatives focused on a specific, under-met need (e.g., early field organizing in targeted Congressional district vs. national media buys)</p>
-            <p>Initiatives co-led by local, on-the-ground partners with deep community knowledge</p>
-            <p>Immediate targeted races; please contact us for more information about our work on specific US House and Senate races</p>
-
-            <h4>Partnerships</h4>
-            <p>Organizations with high potential to block harmful actions and protect communities made more vulnerable by extremist Administration actions</p>
-            <p>Investments will strengthen the capacity, reach & sustainability of trusted, high-performing CBOs defending vulnerable communities, e.g. Muslims, immigrants, transgender & gender non-conforming people</p>
-            <p>In some cases complement our electoral investments in target electoral districts. Effective grassroots resistance in key states/districts today sets the stage for voter mobilization in 2018)</p> -->
-
           </div>
         </div>
       </div>
@@ -145,7 +134,7 @@
               <li><a class="ml-0" href="/issues">Issues</a></li>
               <li><a href="/resources">Resources</a></li>
               <li><a href="/contact">Contact</a></li>
-              <li><a href="/">Take Action</a></li>
+              <li><a href="/help">Take Action</a></li>
             </ul>
           </div>
         </div>
@@ -169,6 +158,12 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script project="P86M78" src="https://cdn.component.io/v1"></script>
+
+<script>
+  Component.ready(function () {
+    $('[component-cloak]').removeAttr('component-cloak')
+  })
+</script>
 
 
 </body>

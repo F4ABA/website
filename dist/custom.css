@@ -33,7 +33,7 @@ component { display: none; }
   padding: 14px 24px;
   font-size: 21px;
 }
-[v-cloak] { display: none; }
+[v-cloak], [component-cloak] { display: none; }
 
 /* Supporting marketing content */
 .marketing {
