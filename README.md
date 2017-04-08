@@ -31,3 +31,5 @@ gulp deploy
 `gulp deploy` uploads contents of the `/dist` folder to S3
 
 **Note** deploy will not work unless a configuration file named `awsconfig.js` is placed in the root folder (same level as this README). Look at `dummyawsconfig.js` for format.
+
+Once deployed to S3, the CloudFront cache must be invalidated before new changes will show on the production site. You can do this in the CloudFront dashboard on AWS, targeting distribution E264GKACJBWA14.
