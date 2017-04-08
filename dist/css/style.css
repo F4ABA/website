@@ -556,6 +556,10 @@ a.min1:hover {
     color: #ddd;
     margin-top: 9px;
     font-size: 14px;
+    background: white;
+    padding: 0 8px;
+    z-index: 10;
+    position: relative;
 }
 .what-icon {
     margin-bottom: 20px;

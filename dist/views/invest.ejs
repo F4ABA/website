@@ -16,55 +16,55 @@
     <%- include('partials/header.ejs', { data: { state: 'invest' }}) %>
 
     <section class="bg-faded py-5" style="min-height: 400px;">
-      <div class="container pt-5">
+      <div class="container">
         <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="what-top meet">
-              <div class="section-title">
-                <h1 class="title-font">Invest</h1>
-                <div class="what-icon">
-                  <i class="fa fa-money" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="loader" component-loading></div>
-
-        <div component-cloak class="row">
-          <div class="col-12">
-            <component content name="Overview" class="py-2"></component>
-          </div>
-        </div>
-        <div component-cloak class="row">
-          <div class="col-sm-6">
-            <div class="card">
+          <div class="col-md-12">
+            <div class="card p-4">
               <div class="card-block">
-                <component content name="Why invest"></component>
+
+                <div class="what-top meet text-center">
+                  <div class="section-title">
+                    <h1 class="title-font">Invest</h1>
+                    <div class="what-icon">
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="loader" component-loading></div>
+
+                <div component-cloak class="row">
+                  <div class="col-12">
+                    <component content name="Overview" class="py-2"></component>
+                  </div>
+                </div>
+                <div component-cloak class="row">
+                  <div class="col-sm-6">
+                    <component content name="Why invest"></component>
+                  </div>
+                  <div class="col-sm-6">
+                    <component>
+                      <div class="card mb-3" v-for="item in items">
+                        <div class="card-header bg-primary text-white">
+                          <h4 class="my-2" v-text="item.title"></h4>
+                        </div>
+                        <div class="card-block">
+                          <div v-html="item.body"></div>
+                          <a v-if="item.buttonText"
+                            :href="item.buttonLink"
+                            target="_blank"
+                            v-text="item.buttonText"
+                            class="btn btn-lg btn-danger">
+                          </a>
+                        </div>
+                      </div>
+                    </component>
+
+                  </div>
+                </div>
+
               </div>
             </div>
-          </div>
-          <div class="col-sm-6">
-            <component>
-              <div class="card mb-3" v-for="item in items">
-                <div class="card-header bg-primary text-white">
-                  <h4 class="my-2" v-text="item.title"></h4>
-                </div>
-                <div class="card-block">
-                  <div v-html="item.body"></div>
-                  <a v-if="item.buttonText"
-                    :href="item.buttonLink"
-                    target="_blank"
-                    v-text="item.buttonText"
-                    class="btn btn-lg btn-danger">
-                  </a>
-                </div>
-              </div>
-            </component>
-
-            <p></p>
-
           </div>
         </div>
       </div>

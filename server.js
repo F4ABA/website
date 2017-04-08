@@ -14,7 +14,8 @@ const routes = [
   { path: '/initiatives', file: 'initiatives.html' },
   { path: '/resources',   file: 'resources.html' },
   { path: '/contact',     file: 'contact.html' },
-  { path: '/help',     file: 'help.html' },
+  { path: '/help',        file: 'help.html' },
+  { path: '/ca-49',       file: 'ca-49.html' },
 ]
 
 routes.map(pair => {
