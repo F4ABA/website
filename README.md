@@ -12,6 +12,12 @@ npm start
 ```
 running at http://localhost:3000
 
+You can also watch files in the `/src` directory for changes and auto-compile into `/dist` with
+
+```
+gulp watch
+```
+
 ### Deploy
 
 Deploying to production is a 2-step process:
