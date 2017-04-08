@@ -182,6 +182,7 @@
 <script>
   Component.ready(function () {
     $('[component-cloak]').removeAttr('component-cloak')
+    $('[component-loading]').hide()
   })
 </script>
 

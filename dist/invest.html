@@ -74,6 +74,8 @@
           </div>
         </div>
 
+        <div class="loader" component-loading></div>
+
         <div component-cloak class="row">
           <div class="col-12">
             <component content name="Overview" class="py-2"></component>
@@ -184,6 +186,7 @@
 <script>
   Component.ready(function () {
     $('[component-cloak]').removeAttr('component-cloak')
+    $('[component-loading]').hide()
   })
 </script>
 
