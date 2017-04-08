@@ -47,7 +47,7 @@
           <li><a href="/about" class="">Who We Are</a></li>
           <li><a href="/invest" class="active">Invest</a></li>
           <li><a href="/initiatives" class="">Initiatives</a></li>
-          <li><a href="/ca-49" class="">CA-49</a></li>
+          <!-- <li><a href="/ca-49" class="">CA-49</a></li> -->
         </ul>
       </nav>
     </div>

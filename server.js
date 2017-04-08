@@ -15,7 +15,7 @@ const routes = [
   { path: '/resources',   file: 'resources.html' },
   { path: '/contact',     file: 'contact.html' },
   { path: '/help',        file: 'help.html' },
-  { path: '/ca-49',       file: 'ca-49.html' },
+  // { path: '/ca-49',       file: 'ca-49.html' },
 ]
 
 routes.map(pair => {

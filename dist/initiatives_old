@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-<title>Contact us | Fight for a Better America</title>
+<title>Initiatives | Fight for a Better America</title>
 <meta name="description" content="">
 
 <link rel="shortcut icon" type="image/x-icon" href="img/fav16.png">
@@ -43,10 +43,10 @@
         <ul>
           <!-- <li><a href="/issues" class="">Issues</a></li> -->
           <!-- <li><a href="/resources" class="">Resources</a></li> -->
-          <!-- <li><a href="/contact" class="active">Contact</a></li> -->
+          <!-- <li><a href="/contact" class="">Contact</a></li> -->
           <li><a href="/about" class="">Who We Are</a></li>
           <li><a href="/invest" class="">Invest</a></li>
-          <li><a href="/initiatives" class="">Initiatives</a></li>
+          <li><a href="/initiatives" class="active">Initiatives</a></li>
           <!-- <li><a href="/ca-49" class="">CA-49</a></li> -->
         </ul>
       </nav>
@@ -55,52 +55,27 @@
 </header>
 
 
-    <section class="bg-faded py-5">
+    <section class="bg-faded py-5" style="min-height: 400px;">
       <div class="container">
-        <div class="row justify-content-md-center">
-          <div id="volunteer-form" class="col-12 col-md-6">
-            <div class="card mb-5 py-4">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card mb-5 p-4">
               <div class="card-block">
-                <div class="what-top meet text-center mt-2">
+
+                <div class="what-top meet text-center">
                   <div class="section-title">
-                    <h1 class="title-font">Contact Us</h1>
+                    <h1 class="title-font">Initiatives</h1>
                     <div class="what-icon">
-                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                      <i class="fa fa-bullhorn" aria-hidden="true"></i>
                     </div>
                   </div>
                 </div>
-                <form @submit="submit" class="form" v-if="!success" v-cloak>
-                  <div class="form-group row">
-                    <div class="col-12">
-                      <label for="nameInput" class="col-form-label">Name</label>
-                      <input type="text" v-model="name" class="form-control" id="nameInput" placeholder="Your Name">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-12">
-                      <label for="emailInput" class="col-form-label">Email</label>
-                      <input type="email" v-model="email" class="form-control" id="emailInput" placeholder="email@example.com">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-12">
-                      <label for="telInput" class="col-form-label">Tel</label>
-                      <input type="text" v-model="phone" class="form-control" id="telInput" placeholder="(555) 951-6532">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-12">
-                      <label for="messageInput" class="col-form-label">Message</label>
-                      <textarea v-model="message" class="form-control" id="messageInput" rows=6></textarea>
-                    </div>
-                  </div>
-                  <div class="alert alert-warning" v-if="alert" v-text="alert"></div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-                <div v-if="success" class="alert alert-info">Thank you, we'll be in touch!</div>
+
+                <div class="loader" component-loading></div>
+                <component content></component>
+
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -182,48 +157,6 @@
   })
 </script>
 
-
-  <script>
-    (function() {
-      new ComponentVue({
-        el: '#volunteer-form',
-        data: {
-          name: '',
-          email: '',
-          phone: '',
-          message: '',
-          alert: '',
-          success: false,
-        },
-        methods: {
-          submit: function (e) {
-            e.preventDefault()
-            var that = this
-            this.alert = ''
-            if (!this.email) return this.alert = 'Please add your email address'
-            if (!this.message) return this.alert = 'Please add your message'
-            componentAxios.post(ComponentUrl + 'posts', {
-              project: ComponentProject,
-              instance: 278,
-              data: {
-                name: this.name,
-                email: this.email,
-                phone: this.phone,
-                message: this.message
-              }
-            })
-            .then(function (response) {
-              that.alert = 'Message sent'
-              that.success = true
-            })
-            .catch(function (error) {
-              that.alert = '' + error.message
-            })
-          }
-        }
-      })
-    })()
-  </script>
 
 </body>
 

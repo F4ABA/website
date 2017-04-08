@@ -47,7 +47,7 @@
           <li><a href="/about" class="">Who We Are</a></li>
           <li><a href="/invest" class="">Invest</a></li>
           <li><a href="/initiatives" class="">Initiatives</a></li>
-          <li><a href="/ca-49" class="">CA-49</a></li>
+          <!-- <li><a href="/ca-49" class="">CA-49</a></li> -->
         </ul>
       </nav>
     </div>
@@ -58,8 +58,8 @@
     <section class="bg-faded py-5" style="min-height: 400px;">
       <div class="container">
         <div class="row">
-          <div class="col-lg-10 offset-lg-1">
-            <div class="card p-4">
+          <div class="col-md-6 offset-md-3">
+            <div class="card py-4">
               <div class="card-block">
 
                 <div class="what-top meet text-center">
@@ -71,139 +71,137 @@
                   </div>
                 </div>
 
-                <div class="row justify-content-md-center mb-5 pb-5">
-              <div id="volunteer-form" class="col-12 col-md-6" v-cloak>
-                <form @submit="submit" class="form" v-if="!success">
-                  <div class="form-group row">
-                    <div class="col-12">
-                      <label for="stateInput" class="col-form-label">In what states are you willing to volunteer?</label>
-                      <select multiple class="form-control" v-model="states" size=10>
-                        <option value="AL">Alabama</option>
-                        <option value="AK">Alaska</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="AR">Arkansas</option>
-                        <option value="CA">California</option>
-                        <option value="CO">Colorado</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="DE">Delaware</option>
-                        <option value="DC">District Of Columbia</option>
-                        <option value="FL">Florida</option>
-                        <option value="GA">Georgia</option>
-                        <option value="HI">Hawaii</option>
-                        <option value="ID">Idaho</option>
-                        <option value="IL">Illinois</option>
-                        <option value="IN">Indiana</option>
-                        <option value="IA">Iowa</option>
-                        <option value="KS">Kansas</option>
-                        <option value="KY">Kentucky</option>
-                        <option value="LA">Louisiana</option>
-                        <option value="ME">Maine</option>
-                        <option value="MD">Maryland</option>
-                        <option value="MA">Massachusetts</option>
-                        <option value="MI">Michigan</option>
-                        <option value="MN">Minnesota</option>
-                        <option value="MS">Mississippi</option>
-                        <option value="MO">Missouri</option>
-                        <option value="MT">Montana</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="NV">Nevada</option>
-                        <option value="NH">New Hampshire</option>
-                        <option value="NJ">New Jersey</option>
-                        <option value="NM">New Mexico</option>
-                        <option value="NY">New York</option>
-                        <option value="NC">North Carolina</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="OH">Ohio</option>
-                        <option value="OK">Oklahoma</option>
-                        <option value="OR">Oregon</option>
-                        <option value="PA">Pennsylvania</option>
-                        <option value="RI">Rhode Island</option>
-                        <option value="SC">South Carolina</option>
-                        <option value="SD">South Dakota</option>
-                        <option value="TN">Tennessee</option>
-                        <option value="TX">Texas</option>
-                        <option value="UT">Utah</option>
-                        <option value="VT">Vermont</option>
-                        <option value="VA">Virginia</option>
-                        <option value="WA">Washington</option>
-                        <option value="WV">West Virginia</option>
-                        <option value="WI">Wisconsin</option>
-                        <option value="WY">Wyoming</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-12">
-                      <label for="messageInput" class="col-form-label">How do you want to help?</label>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="Lobby Members of Congress" v-model="howToHelp"/>
-                          Lobby Members of Congress
-                        </label>
+                <div id="volunteer-form" v-cloak>
+                  <form @submit="submit" class="form" v-if="!success">
+                    <div class="form-group row">
+                      <div class="col-12">
+                        <label for="stateInput" class="col-form-label">In what states are you willing to volunteer?</label>
+                        <select multiple class="form-control" v-model="states" size=10>
+                          <option value="AL">Alabama</option>
+                          <option value="AK">Alaska</option>
+                          <option value="AZ">Arizona</option>
+                          <option value="AR">Arkansas</option>
+                          <option value="CA">California</option>
+                          <option value="CO">Colorado</option>
+                          <option value="CT">Connecticut</option>
+                          <option value="DE">Delaware</option>
+                          <option value="DC">District Of Columbia</option>
+                          <option value="FL">Florida</option>
+                          <option value="GA">Georgia</option>
+                          <option value="HI">Hawaii</option>
+                          <option value="ID">Idaho</option>
+                          <option value="IL">Illinois</option>
+                          <option value="IN">Indiana</option>
+                          <option value="IA">Iowa</option>
+                          <option value="KS">Kansas</option>
+                          <option value="KY">Kentucky</option>
+                          <option value="LA">Louisiana</option>
+                          <option value="ME">Maine</option>
+                          <option value="MD">Maryland</option>
+                          <option value="MA">Massachusetts</option>
+                          <option value="MI">Michigan</option>
+                          <option value="MN">Minnesota</option>
+                          <option value="MS">Mississippi</option>
+                          <option value="MO">Missouri</option>
+                          <option value="MT">Montana</option>
+                          <option value="NE">Nebraska</option>
+                          <option value="NV">Nevada</option>
+                          <option value="NH">New Hampshire</option>
+                          <option value="NJ">New Jersey</option>
+                          <option value="NM">New Mexico</option>
+                          <option value="NY">New York</option>
+                          <option value="NC">North Carolina</option>
+                          <option value="ND">North Dakota</option>
+                          <option value="OH">Ohio</option>
+                          <option value="OK">Oklahoma</option>
+                          <option value="OR">Oregon</option>
+                          <option value="PA">Pennsylvania</option>
+                          <option value="RI">Rhode Island</option>
+                          <option value="SC">South Carolina</option>
+                          <option value="SD">South Dakota</option>
+                          <option value="TN">Tennessee</option>
+                          <option value="TX">Texas</option>
+                          <option value="UT">Utah</option>
+                          <option value="VT">Vermont</option>
+                          <option value="VA">Virginia</option>
+                          <option value="WA">Washington</option>
+                          <option value="WV">West Virginia</option>
+                          <option value="WI">Wisconsin</option>
+                          <option value="WY">Wyoming</option>
+                        </select>
                       </div>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="Educate our networks & the public" v-model="howToHelp"/>
-                          Educate our networks & the public
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="Participate in national & local campaigns" v-model="howToHelp"/>
-                          Participate in national & local campaigns
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="Social media" v-model="howToHelp"/>
-                          Social media
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="Event planning & volunteer engagement" v-model="howToHelp"/>
-                          Event planning & volunteer engagement
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="Host a house party" v-model="howToHelp"/>
-                          Host a house party
-                        </label>
-                      </div>
-                      <small>*Check two or three if you are feeling ambitious</small>
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-12">
-                      <label for="nameInput" class="col-form-label">Name</label>
-                      <input type="text" v-model="name" class="form-control" id="nameInput" placeholder="Your Name">
+                    <div class="form-group row">
+                      <div class="col-12">
+                        <label for="messageInput" class="col-form-label">How do you want to help?</label>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="Lobby Members of Congress" v-model="howToHelp"/>
+                            Lobby Members of Congress
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="Educate our networks & the public" v-model="howToHelp"/>
+                            Educate our networks & the public
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="Participate in national & local campaigns" v-model="howToHelp"/>
+                            Participate in national & local campaigns
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="Social media" v-model="howToHelp"/>
+                            Social media
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="Event planning & volunteer engagement" v-model="howToHelp"/>
+                            Event planning & volunteer engagement
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="Host a house party" v-model="howToHelp"/>
+                            Host a house party
+                          </label>
+                        </div>
+                        <small>*Check two or three if you are feeling ambitious</small>
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-12">
-                      <label for="emailInput" class="col-form-label">Email</label>
-                      <input type="email" v-model="email" class="form-control" id="emailInput" placeholder="email@example.com">
+                    <div class="form-group row">
+                      <div class="col-12">
+                        <label for="nameInput" class="col-form-label">Name</label>
+                        <input type="text" v-model="name" class="form-control" id="nameInput" placeholder="Your Name">
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-12">
-                      <label for="telInput" class="col-form-label">Tel</label>
-                      <input type="text" v-model="phone" class="form-control" id="telInput" placeholder="(555) 951-6532">
+                    <div class="form-group row">
+                      <div class="col-12">
+                        <label for="emailInput" class="col-form-label">Email</label>
+                        <input type="email" v-model="email" class="form-control" id="emailInput" placeholder="email@example.com">
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-12">
-                      <label for="messageInput" class="col-form-label">Additional information you would like us to know</label>
-                      <textarea v-model="message" class="form-control" id="messageInput" rows=6></textarea>
+                    <div class="form-group row">
+                      <div class="col-12">
+                        <label for="telInput" class="col-form-label">Tel</label>
+                        <input type="text" v-model="phone" class="form-control" id="telInput" placeholder="(555) 951-6532">
+                      </div>
                     </div>
-                  </div>
-                  <div class="alert alert-warning" v-if="alert" v-text="alert"></div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-                <div v-if="success" class="alert alert-info">Thank you, we'll be in touch!</div>
-              </div>
-            </div>
+                    <div class="form-group row">
+                      <div class="col-12">
+                        <label for="messageInput" class="col-form-label">Additional information you would like us to know</label>
+                        <textarea v-model="message" class="form-control" id="messageInput" rows=6></textarea>
+                      </div>
+                    </div>
+                    <div class="alert alert-warning" v-if="alert" v-text="alert"></div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                  <div v-if="success" class="alert alert-info">Thank you, we'll be in touch!</div>
+                </div>
               </div>
             </div>
           </div>
