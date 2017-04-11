@@ -1,6 +1,6 @@
 module.exports = {
   key:    '<AWS key>',
   secret: '<AWS secret>',
-  bucket: '<AWS bucket name>',
+  bucket: 'fightforbetter',
   region: 'us-east-1',
 }
