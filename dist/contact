@@ -30,7 +30,7 @@
   <div class="col-md-12">
     <div class="logo floatleft">
       <a href="/">
-        <img alt="Fight for a Better America logo" src="img/logo/logo2.png" style="max-width: 60px;">
+        <img alt="Fight for a Better America logo" src="/img/logo/logo2.png" style="max-width: 60px;">
       </a>
     </div>
     <div class="header-search floatright">
@@ -47,7 +47,6 @@
           <li><a href="/about" class="">Who We Are</a></li>
           <li><a href="/initiatives" class="">Initiatives</a></li>
            <li><a href="/help" class="">Volunteer</a></li>
-          <!-- <li><a href="/ca-49" class="">CA-49</a></li> -->
         </ul>
       </nav>
     </div>
@@ -113,7 +112,7 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="social-logo">
             <a href="/">
-              <img src="img/logo/logo2.png" alt="Fight for a Better America logo" style="width: 50px; height: 50px;">
+              <img src="/img/logo/logo2.png" alt="Fight for a Better America logo" style="width: 50px; height: 50px;">
             </a>
           </div>
         </div>
@@ -170,8 +169,8 @@
 
   </div>
 
-  <script src="js/jquery-1.12.4.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+  <script src="/js/jquery-1.12.4.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
 <script project="P86M78" src="https://cdn.component.io/v1"></script>
 

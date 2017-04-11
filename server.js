@@ -7,16 +7,18 @@ let express     = require('express')
 ,   port = process.env.PORT || 3000
 
 const routes = [
-  { path: '/',            file: 'index.html' },
-  { path: '/about',       file: 'about.html' },
-  { path: '/issues',      file: 'issues.html' },
-  { path: '/invest',      file: 'invest.html' },
-  { path: '/donate',      file: 'donate.html' },
-  { path: '/initiatives', file: 'initiatives.html' },
-  { path: '/resources',   file: 'resources.html' },
-  { path: '/contact',     file: 'contact.html' },
-  { path: '/help',        file: 'help.html' },
-  // { path: '/ca-49',       file: 'ca-49.html' },
+  { path: '/',                file: 'index.html' },
+  { path: '/about',           file: 'about.html' },
+  { path: '/invest',          file: 'invest.html' },
+  { path: '/donate',          file: 'donate.html' },
+  { path: '/initiatives',     file: 'initiatives.html' },
+  { path: '/resources',       file: 'resources.html' },
+  { path: '/contact',         file: 'contact.html' },
+  { path: '/help',            file: 'help.html' },
+  { path: '/issues/climate',  file: 'issues/climate.html' },
+  { path: '/issues/russia',   file: 'issues/russia.html' },
+  { path: '/issues/healthcare', file: 'issues/healthcare.html' },
+  { path: '/issues/plannedparenthood', file: 'issues/plannedparenthood.html' },
 ]
 
 routes.map(pair => {
