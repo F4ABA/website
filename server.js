@@ -11,6 +11,7 @@ const routes = [
   { path: '/about',       file: 'about.html' },
   { path: '/issues',      file: 'issues.html' },
   { path: '/invest',      file: 'invest.html' },
+  { path: '/donate',      file: 'donate.html' },
   { path: '/initiatives', file: 'initiatives.html' },
   { path: '/resources',   file: 'resources.html' },
   { path: '/contact',     file: 'contact.html' },
