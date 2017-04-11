@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-<title>Invest | Fight for a Better America</title>
+<title>Donate | Fight for a Better America</title>
 <meta name="description" content="">
 
 <link rel="shortcut icon" type="image/x-icon" href="img/fav16.png">
@@ -45,7 +45,7 @@
           <!-- <li><a href="/resources" class="">Resources</a></li> -->
           <!-- <li><a href="/contact" class="">Contact</a></li> -->
           <li><a href="/about" class="">Who We Are</a></li>
-          <li><a href="/donate" class="">Donate</a></li>
+          <li><a href="/donate" class="active">Donate</a></li>
           <li><a href="/initiatives" class="">Initiatives</a></li>
           <!-- <li><a href="/ca-49" class="">CA-49</a></li> -->
         </ul>
@@ -58,13 +58,13 @@
     <section class="bg-faded py-5" style="min-height: 400px;">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-12 col-md-10 offset-md-1">
             <div class="card p-4">
               <div class="card-block">
 
                 <div class="what-top meet text-center">
                   <div class="section-title">
-                    <h1 class="title-font">Invest</h1>
+                    <h1 class="title-font">Donate</h1>
                     <div class="what-icon">
                       <i class="fa fa-money" aria-hidden="true"></i>
                     </div>
@@ -72,41 +72,20 @@
                 </div>
 
                 <div class="loader" component-loading></div>
-
-                <div component-cloak class="row">
-                  <div class="col-12">
-                    <component content name="Overview" class="py-2"></component>
-                  </div>
-                </div>
-                <div component-cloak class="row">
-                  <div class="col-sm-6">
-                    <component content name="Why invest"></component>
-                  </div>
-                  <div class="col-sm-6">
-                    <component>
-                      <div class="card mb-3" v-for="item in items">
-                        <div class="card-header bg-primary text-white">
-                          <h4 class="my-2" v-text="item.title"></h4>
-                        </div>
-                        <div class="card-block">
-                          <div v-html="item.body"></div>
-                          <a v-if="item.buttonText"
-                            :href="item.buttonLink"
-                            target="_blank"
-                            v-text="item.buttonText"
-                            class="btn btn-lg btn-danger">
-                          </a>
-                        </div>
-                      </div>
-                    </component>
-
-                  </div>
-                </div>
-
+                <component content class="py-2"></component>
               </div>
             </div>
+
           </div>
         </div>
+
+        <style>
+          [component] ul {
+            list-style: inherit;
+            margin: inherit;
+            padding: 0 0 10px 40px;
+          }
+        </style>
       </div>
     </section>
 
