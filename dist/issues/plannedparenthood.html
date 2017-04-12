@@ -4,11 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-<title>Issues | Fight for a Better America</title>
+<title>Planned Parenthood | Fight for a Better America</title>
 <meta name="description" content="">
 
 <link rel="shortcut icon" type="image/x-icon" href="img/fav16.png">
@@ -25,13 +24,12 @@
 <body>
 
   <div class="wrapper">
-
     
 <header class="header-area intelligent-header">
   <div class="col-md-12">
     <div class="logo floatleft">
       <a href="/">
-        <img alt="Fight for a Better America logo" src="img/logo/logo2.png" style="max-width: 60px;">
+        <img alt="Fight for a Better America logo" src="/img/logo/logo2.png" style="max-width: 60px;">
       </a>
     </div>
     <div class="header-search floatright">
@@ -48,36 +46,44 @@
           <li><a href="/about" class="">Who We Are</a></li>
           <li><a href="/initiatives" class="">Initiatives</a></li>
            <li><a href="/help" class="">Volunteer</a></li>
-          <!-- <li><a href="/ca-49" class="">CA-49</a></li> -->
         </ul>
       </nav>
     </div>
   </div>
 </header>
 
+    
+<section class="bg-faded py-5" style="min-height: 400px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card mb-5 p-4">
+          <div class="card-block">
 
-    <section class="text-center">
-      <div style="padding: 50px 20px 40px; background: rgba(0,44,119,0.9);">
-        <h3 class="text-white title-font">Get to know the movement<br>and what YOU can do for our country</h3>
-      </div>
-    </section>
-
-    <section class="section-margin ptb-80">
-      <div class="container">
-        <component>
-          <div class="row justify-content-md-center" v-if="items.length < 1">
-            <div class="loader"></div>
-          </div>
-          <div class="row justify-content-md-center">
-            <div v-for="item in items" class="col-sm-3 col-xs-6">
-              <a :href="item.link" :title="item.title" v-text="item.title"></a>
-              <h1 v-text="item.title"></h1>
-              <img :src="item.image"/>
+            <div class="what-top meet text-center">
+              <div class="section-title">
+                <h1 class="title-font">Planned Parenthood</h1>
+                <div class="what-icon">
+                  <i class="fa fa-users" aria-hidden="true"></i>
+                </div>
+              </div>
             </div>
+
+            <div class="loader" component-loading></div>
+
+            <div component-cloak class="row justify-content-md-center mb-5">
+              <div class="col-12 col-md-10">
+                <component content></component>
+              </div>
+            </div>
+
           </div>
-        </component>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <footer id="footer" class="social-area">
   <div class="container">
@@ -86,7 +92,7 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="social-logo">
             <a href="/">
-              <img src="img/logo/logo2.png" alt="Fight for a Better America logo" style="width: 50px; height: 50px;">
+              <img src="/img/logo/logo2.png" alt="Fight for a Better America logo" style="width: 50px; height: 50px;">
             </a>
           </div>
         </div>
@@ -141,11 +147,10 @@
   <i class="fa fa-chevron-up"></i>
 </div>
 
-
   </div>
 
-  <script src="js/jquery-1.12.4.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+  <script src="/js/jquery-1.12.4.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
 <script project="P86M78" src="https://cdn.component.io/v1"></script>
 

@@ -1,0 +1,32 @@
+
+<section class="bg-faded py-5" style="min-height: 400px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card mb-5 p-4">
+          <div class="card-block">
+
+            <div class="what-top meet text-center">
+              <div class="section-title">
+                <h1 class="title-font">Issues</h1>
+                <div class="what-icon">
+                  <i class="fa fa-users" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="loader" component-loading></div>
+
+            <div component-cloak class="row justify-content-md-center mb-5">
+              <div class="col-12 col-md-10">
+                <component content></component>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-<title>Initiatives | Fight for a Better America</title>
+<title>Issues | Fight for a Better America</title>
 <meta name="description" content="">
 
 <link rel="shortcut icon" type="image/x-icon" href="img/fav16.png">
@@ -41,11 +42,11 @@
     <div class="main-menu floatright">
       <nav>
         <ul>
-          <!-- <li><a href="/issues" class="">Issues</a></li> -->
+          <!-- <li><a href="/issues" class="active">Issues</a></li> -->
           <!-- <li><a href="/resources" class="">Resources</a></li> -->
           <!-- <li><a href="/contact" class="">Contact</a></li> -->
           <li><a href="/about" class="">Who We Are</a></li>
-          <li><a href="/initiatives" class="active">Initiatives</a></li>
+          <li><a href="/initiatives" class="">Initiatives</a></li>
            <li><a href="/help" class="">Volunteer</a></li>
         </ul>
       </nav>
@@ -54,29 +55,26 @@
 </header>
 
 
-    <section class="bg-faded py-5" style="min-height: 400px;">
+    <section class="text-center">
+      <div style="padding: 50px 20px 40px; background: rgba(0,44,119,0.9);">
+        <h3 class="text-white title-font">Get to know the movement<br>and what YOU can do for our country</h3>
+      </div>
+    </section>
+
+    <section class="section-margin ptb-80">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card mb-5 p-4">
-              <div class="card-block">
-
-                <div class="what-top meet text-center">
-                  <div class="section-title">
-                    <h1 class="title-font">Initiatives</h1>
-                    <div class="what-icon">
-                      <i class="fa fa-bullhorn" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="loader" component-loading></div>
-                <component content></component>
-
-              </div>
+        <component>
+          <div class="row justify-content-md-center" v-if="items.length < 1">
+            <div class="loader"></div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div v-for="item in items" class="col-sm-3 col-xs-6">
+              <a :href="item.link" :title="item.title" v-text="item.title"></a>
+              <h1 v-text="item.title"></h1>
+              <img :src="item.image"/>
             </div>
           </div>
-        </div>
+        </component>
       </div>
     </section>
 
@@ -141,6 +139,7 @@
 <div id="toTop">
   <i class="fa fa-chevron-up"></i>
 </div>
+
 
   </div>
 

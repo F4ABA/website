@@ -18,7 +18,7 @@ gulp.task('deploy', () => {
 
 gulp.task('build', () => {
   // Compile ejs to dist without extension (for AWS)
-  gulp.src('./src/views/*.ejs')
+  gulp.src('./src/views/**/*.ejs')
     .pipe(ejs({}, {}, { ext: '' }))
     .pipe(gulp.dest('./dist'))
 
@@ -26,6 +26,9 @@ gulp.task('build', () => {
   gulp.src('./src/views/*.ejs')
     .pipe(ejs({}, {}, { ext: '.html' }))
     .pipe(gulp.dest('./dist'))
+  gulp.src('./src/views/issues/*.ejs')
+    .pipe(ejs({}, {}, { ext: '.html' }))
+    .pipe(gulp.dest('./dist/issues/'))
 
   // Copy other files to dist
   gulp.src('./src/**/*.*')
