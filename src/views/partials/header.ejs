@@ -14,12 +14,10 @@
     <div class="main-menu floatright">
       <nav>
         <ul>
-          <!-- <li><a href="/issues" class="<%= data.state === 'issues' ? 'active' : '' %>">Issues</a></li> -->
           <!-- <li><a href="/resources" class="<%= data.state === 'resources' ? 'active' : '' %>">Resources</a></li> -->
           <!-- <li><a href="/contact" class="<%= data.state === 'contact' ? 'active' : '' %>">Contact</a></li> -->
           <li><a href="/about" class="<%= data.state === 'about' ? 'active' : '' %>">Who We Are</a></li>
           <li><a href="/initiatives" class="<%= data.state === 'initiatives' ? 'active' : '' %>">Initiatives</a></li>
-          <li><a href="/donate" class="<%= data.state === 'donate' ? 'active' : '' %>">Donate</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Issues
@@ -28,7 +26,7 @@
               <a v-for="item in items" class="dropdown-item" :href="item.link" v-text="item.title"></a>
             </component>
           </li>
-          <li><a href="/help" class="<%= data.state === 'help' ? 'active' : '' %>">Volunteer</a></li>
+          <li><a href="/donate" class="<%= data.state === 'donate' ? 'active' : '' %>">Donate</a></li>
         </ul>
       </nav>
     </div>
