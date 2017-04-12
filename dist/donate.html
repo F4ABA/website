@@ -46,7 +46,15 @@
           <!-- <li><a href="/contact" class="">Contact</a></li> -->
           <li><a href="/about" class="">Who We Are</a></li>
           <li><a href="/initiatives" class="">Initiatives</a></li>
-           <li><a href="/help" class="">Volunteer</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Issues
+            </a>
+            <component key=ekrnm class="dropdown-menu dropdown-menu-right">
+              <a v-for="item in items" class="dropdown-item" :href="item.link" v-text="item.title"></a>
+            </component>
+          </li>
+          <li><a href="/help" class="">Volunteer</a></li>
         </ul>
       </nav>
     </div>

@@ -348,18 +348,22 @@ a.menu-icon i {
     visibility: visible;
     z-index: 99999;
 }
-.main-menu ul li:hover a {
+.main-menu ul li:hover > a {
     color: #ea000d;
 }
-.main-menu ul li:hover ul li a {
+.main-menu ul li:hover ul li > a {
     color: #333;
 }
-.main-menu ul li ul li a {
+.main-menu ul li ul li > a {
     font-weight: 500;
     text-transform: capitalize;
 }
-.main-menu ul li:hover ul li a:hover {
+.main-menu ul li:hover ul li > a:hover {
     color: #ea000d;
+}
+.main-menu ul li.open .dropdown-menu {
+  display: block;
+  top: auto;
 }
 /*----------------------------------------
     3.1.2 Mega menu
