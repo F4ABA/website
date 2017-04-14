@@ -18,6 +18,7 @@ const routes = [
   { path: '/issues/climate',  file: 'issues/climate.html' },
   { path: '/issues/russia',   file: 'issues/russia.html' },
   { path: '/issues/healthcare', file: 'issues/healthcare.html' },
+  { path: '/issues/immigration', file: 'issues/immigration.html' },
   { path: '/issues/plannedparenthood', file: 'issues/plannedparenthood.html' },
 ]
 
