@@ -10,7 +10,7 @@
               <div class="section-title">
                 <h1 class="title-font"><%= data.title || 'Issues' %></h1>
                 <div class="what-icon">
-                  <i class="fa fa-users" aria-hidden="true"></i>
+                  <i class="<%= data.icon || 'fa fa-users' %>" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
@@ -30,3 +30,11 @@
     </div>
   </div>
 </section>
+
+<style>
+  [component][content] ul {
+    list-style: inherit;
+    margin: inherit;
+    padding: 0 0 10px 40px;
+  }
+</style>

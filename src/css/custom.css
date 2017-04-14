@@ -1,6 +1,6 @@
 component { display: none; }
-.main-menu ul li a.active,
-.main-menu ul li a:hover {
+.main-menu ul li > a.active,
+.main-menu ul li > a:hover {
   border-bottom: 3px solid #ea000d;
 }
 .bg-primary {
